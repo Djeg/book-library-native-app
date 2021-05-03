@@ -31,7 +31,7 @@ npm start
 - `/assets`: Contient toutes les images, videos, fonts, audio etc ...
 - `App.js`: C'est ici que notre application commence !
 
-## Documentation
+## Rappel javascript :)
 
 - [Les variables en JS](./docjs/variables.js)
 - [Les fonctions en JS](./docjs/functions.js)
