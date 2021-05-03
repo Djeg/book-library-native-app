@@ -34,3 +34,4 @@ npm start
 ## Documentation
 
 - [Les variables en JS](./docjs/variables.js)
+- [Les fonctions en JS](./docjs/functions.js)
