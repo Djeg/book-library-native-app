@@ -30,3 +30,7 @@ npm start
 - `/node_modules`: Contient toutes les librairies javascript
 - `/assets`: Contient toutes les images, videos, fonts, audio etc ...
 - `App.js`: C'est ici que notre application commence !
+
+## Documentation
+
+- [Les variables en JS](./docjs/variables.js)
