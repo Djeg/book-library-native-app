@@ -19,7 +19,7 @@ expo init book-app
 # On lance la commande npm start
 # npm start démarre un serveur expo
 npm start
-``
+```
 
 # Arborescence d'un projet react native
 
