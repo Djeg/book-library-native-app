@@ -20,6 +20,7 @@ expo init book-app
 # npm start démarre un serveur expo
 npm start
 ``
+
 # Arborescence d'un projet react native
 
 - package.json et yarn.lock ou package-lock.json: Définissent les dépendances nescessaire pour faire fonctionner le projet. (des dépendances ce sont des librairies javascript qui vont venir se placer dans le répertoire `node_modules`)
