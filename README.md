@@ -38,6 +38,10 @@ npm start
 - [Le traitement des tableaux en JS](./doc/array.js)
 - [L'import et l'export en JS](./doc/import-export.js)
 
+## Cours React Native
+
+- [Les composants](./doc/Components.md)
+
 ## Les exercices :
 
 - [Exo1 - Text](./exos/Exo1.md)
