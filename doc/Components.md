@@ -52,6 +52,16 @@ bien simple (balise qui s'ouvre et se referme directement):
 <StatusBar style="auto" />
 ```
 
+De la même manière que l'on peut afficher des variables, nous pouvons aussi
+placer des commentaires
+
+```js
+<View>
+    {/* Ceci est un commentaire */}
+    <StatusBar style="auto" />
+</View>
+```
+
 ## Qu'est ce que c'est qu'un composant
 
 Un composant, c'est une fonction qui **commence par une majuscule** et qui
@@ -70,5 +80,23 @@ Un composant s'utilise comme une balise HTML:
 ```js
 <View>
     <Bonjour />
+</View>
+```
+
+## Les props
+
+Nous pouvons passer des **props** à nos composants:
+
+```js
+const Bonjour = (props) => {
+    return <Text>Bonjour {props.name}</Text>
+}
+```
+
+Ces props peuvent être passé à notre composant lors de son affichage:
+
+```js
+<View>
+    <Bonjour name="Jean" />
 </View>
 ```
