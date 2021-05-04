@@ -1,32 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-const styleSheet = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  helloText: {
-    paddingTop: '10px'
-  },
-  red: {
-    color: 'red',
-  },
-  bigText: {
-    fontSize: '20px',
-  }
-});
-
-const Hello = ({ name, age, style }) => {
-  if (age >= 18) {
-    return <Text style={[styleSheet.helloText, style]}>Bonjour {name}, Vous êtes majeur</Text>
-  }
-
-  return <Text style={[styleSheet.helloText, style]}>Bonjour {name}, Vous n'êtes pas majeur</Text>
-}
+import { StyleSheet, View } from 'react-native';
+import { Hello } from './src/Hello'
 
 export default function App() {
   return (
@@ -43,3 +18,18 @@ export default function App() {
     </View>
   );
 }
+
+const styleSheet = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  red: {
+    color: 'red',
+  },
+  bigText: {
+    fontSize: '20px',
+  }
+});
