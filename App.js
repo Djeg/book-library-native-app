@@ -30,6 +30,6 @@ const styleSheet = StyleSheet.create({
     color: 'red',
   },
   bigText: {
-    fontSize: '20px',
+    fontSize: 20,
   }
 });
