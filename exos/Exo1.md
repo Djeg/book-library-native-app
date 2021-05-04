@@ -24,3 +24,12 @@ Si age > 18, le component devras afficher "Bonjour {name}, vous êtes majeur"
 Sinon "Bonjour {name}, Vous êtes mineur"
 
 Utiliser ce component dans le component App.
+
+# Exercice 5
+
+Mettre dans le fichier "src/Hello.js" la composant "Hello" présent
+dans le fichier "App.js"
+
+Importer le composant "src/Hello.js" depuis "App.js" afin de l'afficher
+
+NOTE: Vous pouvez réfléchir à une solution concernant le style ?
