@@ -45,7 +45,6 @@ let trigger = true; // 1
 let trigger2 = false; // 0
 
 // number
-let age = 18;
 let price = 24.34;
 
 // Chaine de caractères: String

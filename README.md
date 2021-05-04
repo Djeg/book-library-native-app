@@ -41,6 +41,7 @@ npm start
 ## Cours React Native
 
 - [Les composants](./doc/Components.md)
+- [Les feuilles de style](./doc/stylesheets.md)
 
 ## Les exercices :
 
