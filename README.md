@@ -37,3 +37,7 @@ npm start
 - [Les fonctions en JS](./doc/functions.js)
 - [Le traitement des tableaux en JS](./doc/array.js)
 - [L'import et l'export en JS](./doc/import-export.js)
+
+## Les exercices :
+
+- [Exo1 - Text](./exos/Exo1.md)
