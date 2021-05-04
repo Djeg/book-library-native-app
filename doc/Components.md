@@ -89,7 +89,7 @@ Nous pouvons passer des **props** à nos composants:
 
 ```js
 const Bonjour = (props) => {
-    return <Text>Bonjour {props.name}</Text>
+    return <Text>Bonjour {props.name} vous avez {props.age}</Text>
 }
 ```
 
@@ -97,6 +97,6 @@ Ces props peuvent être passé à notre composant lors de son affichage:
 
 ```js
 <View>
-    <Bonjour name="Jean" />
+    <Bonjour name="Jean" age="24" />
 </View>
 ```
