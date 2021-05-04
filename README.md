@@ -36,4 +36,4 @@ npm start
 - [Les variables en JS](./doc/variables.js)
 - [Les fonctions en JS](./doc/functions.js)
 - [Le traitement des tableaux en JS](./doc/array.js)
-- [L'import et l'export en JS](./doc/array.js)
+- [L'import et l'export en JS](./doc/import-export.js)
