@@ -100,3 +100,57 @@ Ces props peuvent être passé à notre composant lors de son affichage:
     <Bonjour name="Jean" age="24" />
 </View>
 ```
+
+Nous pouvons comme dans n'importe quelle fonctions, déstructurer
+les props.
+
+```js
+const Bonjour = ({ name, age }) => {
+    return <Text>Bonjour {name} vous avez {age}</Text>
+}
+```
+
+Mon component Bonjour s'utilise de la même manière:
+
+```js
+<View>
+    <Bonjour name="Jean" age="24" />
+</View>
+```
+
+### Les enfants (children)
+
+En JSX (tout comme en html) un component peut avoir
+des enfant
+
+Éxemple:
+
+```js
+<View>
+    <Text>Coucou</Text>
+</View>
+```
+
+Le Component View à pour enfant `<Text>Coucou</Text>`.
+
+Nous pouvons facilement récupérer les enfants dans un component
+grâce à `props.children` (toujours présente dans tout les components).
+
+Exemple: Une balise text custom
+
+```js
+const LimitedText = ({ children }) => {
+    return <Text numberOfLines="6">{children}</Text>
+}
+```
+
+On peut utiliser ce composant `LimitedText` facilement:
+
+```js
+<View>
+    <LimitedText>
+        Salut les amis, je ne dépasserais jamais
+        6 lignes !
+    </LimitedText>
+</View>
+```
