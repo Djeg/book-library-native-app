@@ -11,7 +11,7 @@ export const Hello = ({ name, age, style }) => {
 
 const styleSheet = StyleSheet.create({
     helloText: {
-        paddingTop: '5px',
-        paddingBottom: '5px',
+        paddingTop: 5,
+        paddingBottom: 5,
     }
 })
