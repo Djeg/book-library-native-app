@@ -10,7 +10,7 @@ const userList = [
  * En javascript on peut réaliser des opérations sur des tableaux
  * en utilisant des « fonction » de notre tableaux.
  * 
- * La fonction la plus simple est le « map »
+ * La fonction la plus simple est le « map ».
  * éxemple transformer notre tableaux d'utilisateur en un tableaux noms:
  * 
  * const names = [ 'david jegat', 'john doe', 'jane doe', 'eric smith' ]
@@ -38,7 +38,7 @@ console.log(names) // [ 'david jegat', 'john doe', 'jane doe', 'eric smith' ]
 // On utilise une fonction fléché à une seule valeur de retour
 const names2 = userList.map((user) => `${user.firstname} ${user.lastname}`)
 
-// On peut enlever les parenthése autour d'un argument UNIQUE d'une fonction
+// On peut enlever les parenthéses autour d'un argument UNIQUE d'une fonction
 // fléché:
 const names3 = userList.map(user => `${user.firstname} ${user.lastname}`)
 

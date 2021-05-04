@@ -14,9 +14,9 @@ let name2 = "David";
 const name3 = "David";
 
 /**
- * Attention c'est trois moyens sont bien différent:
+ * Attention ces trois moyens sont bien différents :
  * 
- * var: Il créé une variable « global au scope ». Il est déconseillé
+ * var: Il créé une variable « globale au scope ». Il est déconseillé
  * car pas assez performant.
  * 
  * let: Il créé une variable « attaché au scope ». Il est conseillé
@@ -27,17 +27,17 @@ const name3 = "David";
  * éxemple:
  */
 
-// Ici pas d'érreur
+// Ici pas d'erreur
 name = 'Jean';
 
-// Ici non plus d'érreur
+// Ici non plus, pas d'erreur
 name2 = "Jack";
 
 // Ici il y a une erreur car c'est une constante
 name3 = "Jane";
 
 /**
- * En javascript il existe des types de valeurs:
+ * En javascript il existe des types de valeur 
  */
 
 // boolean
@@ -52,7 +52,7 @@ let price = 24.34;
 let surname = "Bob";
 let email = 'bob@supermail.com';
 
-// Concatenation de chaine de charactère
+// Concaténation de chaine de charactères
 let userInfo = surname + ': ' + email; // affiche: "Bob: bob@supermail.com"
 
 // Concatenation depuis ES6 (javascript moderne)
@@ -103,7 +103,7 @@ const library = [
 console.log(library[1].title)
 
 /**
- * Les objets peuvent être imbriquer les uns dans les autres
+ * Les objets peuvent être imbriqués les uns dans les autres
  */
 const animal = { type: 'chat' }
 const persan = { age: 32, name: 'Felix' }
@@ -116,7 +116,7 @@ console.log(felix.age) // 32
 console.log(felix.name) // "Felix"
 
 /**
- * Depuis ES6 il éxsiste un system qu'on nomme la
+ * Depuis ES6 il éxiste un system qu'on nomme la
  * "destructuration des arguments"
  * 
  * Cela nous permet d'accéder facilement à des index de tableaux
@@ -136,7 +136,7 @@ console.log(restAges) // [ 34, 43, 52 ]
 // Ici on déclare un objet
 const product = { name: 'Casquette', price: 34.50, category: 'Cloth' }
 
-// Je vais accéder à ma clefs "name" et créer un nouvelle object
+// Je vais accéder à ma clefs "name" et créer un nouvel object
 // avec le reste des clefs
 const {name, ...restProduct} = product;
 

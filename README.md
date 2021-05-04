@@ -33,6 +33,7 @@ npm start
 
 ## Rappel javascript :)
 
-- [Les variables en JS](./docjs/variables.js)
-- [Les fonctions en JS](./docjs/functions.js)
-- [Le traitement des tableaux en JS](./docjs/array.js)
+- [Les variables en JS](./doc/variables.js)
+- [Les fonctions en JS](./doc/functions.js)
+- [Le traitement des tableaux en JS](./doc/array.js)
+- [L'import et l'export en JS](./doc/array.js)
