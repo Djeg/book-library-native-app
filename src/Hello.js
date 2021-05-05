@@ -1,12 +1,23 @@
-import React from 'react'
-import { Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react'
+import { Text, StyleSheet, TextInput, View } from 'react-native';
 
-export const Hello = ({ name, age, style }) => {
-  if (age >= 18) {
-    return <Text style={[styleSheet.helloText, style]}>Bonjour {name}, Vous êtes majeur</Text>
-  }
+const majorText = (age) =>
+  age >= 18
+    ? age >= 50
+      ? "Vous êtes un majeur senior !"
+      : "Vous êtes majeur"
+    : "Vous n'êtes pas majeur"
 
-  return <Text style={[styleSheet.helloText, style]}>Bonjour {name}, Vous n'êtes pas majeur</Text>
+export const Hello = ({ age, style }) => {
+  const [ name, setName ] = useState('Inconnue')
+  const majorSentence = majorText(age)
+
+  return (
+    <View>
+      <Text style={[styleSheet.helloText, style]}>Bonjour {name}, {majorSentence}</Text>
+      <TextInput placeholder="Renseigner votre nom" value={name} onChangeText={setName} />
+    </View>
+  )
 }
 
 const styleSheet = StyleSheet.create({

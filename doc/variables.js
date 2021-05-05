@@ -142,3 +142,14 @@ const {name, ...restProduct} = product;
 console.log(name) // "Casquette"
 console.log(restProduct) // { price: 34.50, category: 'Cloth' } 
 
+/**
+ * En javascript comme dans la plupart des languages,
+ * nous pouvons éxécuter des conditions ternaire
+ * 
+ * Éxemple: Avoir un boolean à true lorsqu'une personne
+ * est majeur
+ */
+const age = 30
+const isMajor = age >= 18 ? true : false
+
+

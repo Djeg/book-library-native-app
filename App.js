@@ -6,14 +6,14 @@ import { Hello } from './src/Hello'
 export default function App() {
   return (
     <View style={styleSheet.container}>
-      <Hello name="David" age="30" />
-      <Hello name="Pierre" age="12" />
-      <Hello style={styleSheet.red} name="Paul" age="32" />
-      <Hello style={styleSheet.bigText} name="Jack" age="16" />
-      <Hello name="David" age="30" />
-      <Hello name="Pierre" age="12" />
-      <Hello name="Paul" age="32" />
-      <Hello name="Jack" age="16" />
+      <Hello age="30" />
+      <Hello age="12" />
+      <Hello style={styleSheet.red} age="32" />
+      <Hello style={styleSheet.bigText} age="16" />
+      <Hello age="30" />
+      <Hello age="12" />
+      <Hello age="32" />
+      <Hello age="16" />
       <StatusBar style="auto" />
     </View>
   );
