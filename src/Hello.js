@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Text, StyleSheet, TextInput, View } from 'react-native';
 
-export const Hello = ({ age, ...restProps}) => {
-  const [ name, setName ] = useState('')
+export const Hello = ({ age, ...restProps }) => {
+  const [name, setName] = useState('')
 
   return (
-    <View>
-      <HelloText name={name} age={age} {...restProps} />
-      <TextInput placeholder="Renseigner votre nom" value={name} onChangeText={setName} />
+    <View style={styleSheet.helloContainer}>
+      <HelloText name={name} age={age} {...restProps} style={styleSheet.title} />
+      <TextInput placeholder="Renseigner votre nom" value={name} onChangeText={setName} style={styleSheet.input} />
     </View>
   )
 }
@@ -35,7 +35,7 @@ const HelloText = ({ name, age, ...restProps }) =>
 
 const HelloText = ({ name, age, ...restProps }) =>
   <Text {...restProps}>
-    { !name ? 'Je ne vous connais pas' : `Bonjour ${name}, ${majorText(age)}` }
+    {!name ? 'Je ne vous connais pas' : `Bonjour ${name}, ${majorText(age)}`}
   </Text>
 
 const majorText = (age) =>
@@ -46,8 +46,30 @@ const majorText = (age) =>
     : "Vous n'êtes pas majeur"
 
 const styleSheet = StyleSheet.create({
-    helloText: {
-        paddingTop: 5,
-        paddingBottom: 5,
-    }
+  helloText: {
+    paddingTop: 5,
+    paddingBottom: 5,
+  },
+  helloContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingLeft: 10,
+    paddingRight: 10,
+    width: '100%'
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#6C715B',
+    marginBottom: 10,
+  },
+  input: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#6C715B',
+    padding: 10,
+    borderBottomColor: '#EFE6BD',
+    borderBottomWidth: 1
+  }
 })
