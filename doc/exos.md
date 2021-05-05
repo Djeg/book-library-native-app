@@ -42,3 +42,14 @@ Dans `src/Hello.js`, enlever la props `name` et créer un state avec
 Retoucher le JSX de `src/Hello.js` pour retourner un component `Text` et
 un component `TextInput`. Lorsque l'utilisateur change le text de l'input
 le name doit changé aussi.
+
+
+# Exercice 7
+
+Créer dans le fichier `src/Hello.js` un component `HelloText`. Ce composant
+accèpte 2 props (`name` et `age`).
+
+Si name est vide, le composant affiche un text "Je ne vous connais pas"
+Si name n'est pas vide, le composant affiche un text "Bonjour {name}, {majorText(age)}"
+
+Afficher `HelloText` dans le component `Hello`.
