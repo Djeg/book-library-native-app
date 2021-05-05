@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Text, StyleSheet, TextInput, View } from 'react-native';
 
-export const Hello = ({ age, ...restProps }) => {
+export const Hello = ({ age, ...restProps}) => {
   const [ name, setName ] = useState('')
 
   return (
