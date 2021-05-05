@@ -28,12 +28,12 @@ const HelloText = ({ name, age, ...restProps }) =>
 const HelloText = ({ name, age, ...restProps }) =>
   <Text {...restProps}>{!name ? 'Je ne vous connais' : `Bonjour ${name}, ${majorText(age)}`}</Text>
 
-export const Hello = ({ age, style }) => {
+export const Hello = ({ age, ...restProps }) => {
   const [ name, setName ] = useState('')
 
   return (
     <View>
-      <HelloText name={name} age={age} style={[styleSheet.helloText]} disabled allowFontScalling />
+      <HelloText name={name} age={age} {...restProps} />
       <TextInput placeholder="Renseigner votre nom" value={name} onChangeText={setName} />
     </View>
   )
