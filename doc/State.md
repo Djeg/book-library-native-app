@@ -29,7 +29,7 @@ export const Hello = () => {
 
 Un state peut-être modifié en utilisant sa fonction de modification
 (setName plus haut). Pour cela, nous avons besoin d'un composant
-avec laquel nous pouvons interargir:
+avec lequel nous pouvons interargir:
 
 ```js
 import React, { useState } from 'react'
