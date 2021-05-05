@@ -16,7 +16,7 @@ import { Text } from 'react-native'
 
 export const Hello = () => {
     // Ici on déclare un state "name" qui vaut
-    // une chaine de caractère vide lorsque le component
+    // la chaine de caractère "Inconnue' lorsque le component
     // s'affiche la première fois
     const [name, setName] = useState('Inconnue')
 
@@ -36,15 +36,17 @@ import React, { useState } from 'react'
 import { Text, TextInput, View } from 'react-native'
 
 export const Hello = () => {
-    // Ici on déclare un state "name" qui vaut
-    // une chaine de caractère vide lorsque le component
-    // s'affiche la première fois
     const [name, setName] = useState('Inconnue')
 
-    // On affiche notre state "name"
     return (
         <View>
             <Text>Bonjour {name}</Text>
+            {/*
+                On utilise un TextInput (react-native) afin de pouvoir
+                mettre à jour notre state `name`. La props "onChangeText"
+                nous permet de récupérer le text entré par l'utilisateur :).
+                Il faut utiliser `setName` afin de mettre à jour notre statec
+            */}
             <TextInput placeholder="Placez votre nom ici !" onChangeText={(text) => { setName(text) }} />
         </View>
     )
