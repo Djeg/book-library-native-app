@@ -8,6 +8,7 @@ const majorText = (age) =>
       : "Vous êtes majeur"
     : "Vous n'êtes pas majeur"
 
+/*
 const HelloText = ({ name, age, ...restProps }) => {
   if (!name) {
     return <Text {...restProps}>Je ne vous connais pas</Text>
@@ -15,6 +16,17 @@ const HelloText = ({ name, age, ...restProps }) => {
 
   return <Text {...restProps}>Bonjour {name}, {majorText(age)}</Text>
 }
+*/
+
+/*
+const HelloText = ({ name, age, ...restProps }) =>
+  !name
+    ? <Text {...restProps}>Je ne vous connais pas</Text>
+    : <Text {...restProps}>Bonjour {name}, {majorText(age)}</Text>
+*/
+
+const HelloText = ({ name, age, ...restProps }) =>
+  <Text {...restProps}>{!name ? 'Je ne vous connais' : `Bonjour ${name}, ${majorText(age)}`}</Text>
 
 export const Hello = ({ age, style }) => {
   const [ name, setName ] = useState('')
