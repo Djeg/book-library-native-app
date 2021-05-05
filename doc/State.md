@@ -45,9 +45,10 @@ export const Hello = () => {
                 On utilise un TextInput (react-native) afin de pouvoir
                 mettre à jour notre state `name`. La props "onChangeText"
                 nous permet de récupérer le text entré par l'utilisateur :).
-                Il faut utiliser `setName` afin de mettre à jour notre statec
+                Il faut utiliser `setName` afin de mettre à jour notre state.
+                La props `value` nous permet d'attacher notre `name` à cette input.
             */}
-            <TextInput placeholder="Placez votre nom ici !" onChangeText={(text) => { setName(text) }} />
+            <TextInput placeholder="Placez votre nom ici !" value={name} onChangeText={(text) => { setName(text) }} />
         </View>
     )
 }
