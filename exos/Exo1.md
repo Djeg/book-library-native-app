@@ -33,3 +33,12 @@ dans le fichier "App.js"
 Importer le composant "src/Hello.js" depuis "App.js" afin de l'afficher
 
 NOTE: Vous pouvez réfléchir à une solution concernant le style ?
+
+# Exercice 6
+
+Dans `src/Hello.js`, enlever la props `name` et créer un state avec
+`useState`.
+
+Retoucher le JSX de `src/Hello.js` pour retourner un component `Text` et
+un component `TextInput`. Lorsque l'utilisateur change le text de l'input
+le name doit changé aussi
