@@ -46,4 +46,4 @@ npm start
 
 ## Les exercices :
 
-- [Exo1 - Text](./exos/Exo1.md)
+- [Tout les exercices](./doc/exos.md)

@@ -41,4 +41,4 @@ Dans `src/Hello.js`, enlever la props `name` et créer un state avec
 
 Retoucher le JSX de `src/Hello.js` pour retourner un component `Text` et
 un component `TextInput`. Lorsque l'utilisateur change le text de l'input
-le name doit changé aussi
+le name doit changé aussi.
