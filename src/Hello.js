@@ -8,12 +8,12 @@ const majorText = (age) =>
       : "Vous êtes majeur"
     : "Vous n'êtes pas majeur"
 
-const HelloText = ({ name, age }) => {
+const HelloText = ({ name, age, ...restProps }) => {
   if (!name) {
-    return <Text>Je ne vous connais pas</Text>
+    return <Text {...restProps}>Je ne vous connais pas</Text>
   }
 
-  return <Text>Bonjour {name}, {majorText(age)}</Text>
+  return <Text {...restProps}>Bonjour {name}, {majorText(age)}</Text>
 }
 
 export const Hello = ({ age, style }) => {
@@ -21,7 +21,7 @@ export const Hello = ({ age, style }) => {
 
   return (
     <View>
-      <HelloText name={name} age={age} />
+      <HelloText name={name} age={age} style={[styleSheet.helloText]} disabled allowFontScalling />
       <TextInput placeholder="Renseigner votre nom" value={name} onChangeText={setName} />
     </View>
   )
