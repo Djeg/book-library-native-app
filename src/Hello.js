@@ -13,6 +13,8 @@ export const Hello = ({ age, ...restProps }) => {
 }
 
 /*
+Step 1
+
 const HelloText = ({ name, age, ...restProps }) => {
   if (!name) {
     return <Text {...restProps}>Je ne vous connais pas</Text>
@@ -23,6 +25,8 @@ const HelloText = ({ name, age, ...restProps }) => {
 */
 
 /*
+Step 2
+
 const HelloText = ({ name, age, ...restProps }) =>
   !name
     ? <Text {...restProps}>Je ne vous connais pas</Text>
