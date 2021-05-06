@@ -1,6 +1,6 @@
 # Installation
 
-La prmière étape c'est l'installation de expo !
+La première étape c'est l'installation de expo !
 
 Expo, c'est un logiciel qui retranscrit un code javascript
 dans un code Native (sur Android c'est Java, sur IOS c'est de l'objectif-C).
