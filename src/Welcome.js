@@ -17,16 +17,13 @@ export const Welcome = () => {
 }
 
 const NameText = ({ name }) =>
-  name ? <Text>Bonjour {name}</Text> : <Text>Je ne vous connais pas</Text>
+  name
+    ? <Text>Bonjour {name}</Text>
+    : <Text>Je ne vous connais pas</Text>
 
-const AgeText = ({ age }) => {
-  if (!age) {
-    return <Text>Renseigner votre age</Text>
-  }
-
-  if (age < 18) {
-    return <Text>Vous avez {age} ans, vous êtes mineur</Text>
-  }
-
-  return <Text>Vous avez {age} ans, vous êtes majeur</Text>
-}
+const AgeText = ({ age }) =>
+  !age
+    ? <Text>Renseigner votre age</Text>
+    : age < 18
+      ? <Text>Vous avez {age} ans, vous êtes mineur</Text>
+      : <Text>Vous avez {age} ans, vous êtes majeur</Text>
