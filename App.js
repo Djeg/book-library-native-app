@@ -1,29 +1,34 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Welcome } from './src/Welcome'
-import { Layout } from './src/Layout'
+import { Text, View, Button } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+
+const Stack = createStackNavigator();
+
+const Screen1 = () => {
+  // Nous récupérons notre objet de navigation depuis `@react-navigation/native`:
+  const navigation = useNavigation()
+
+  return (
+    <View>
+      <Text>Voici screen 1</Text>
+      {/* Nous navigons sur l'écran n° 2 (Screen2) lorque l'on presse le bouton */}
+      <Button title="Go to screen 2" onPress={() => navigation.navigate('Screen2')} />
+    </View>
+  )
+}
+const Screen2 = () => <Text>Voici screen 2</Text>
 
 export default function App() {
   return (
-    <Layout>
-      <Welcome />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Screen1" component={Screen1} />
+        <Stack.Screen name="Screen2" component={Screen2} />
+      </Stack.Navigator>
       <StatusBar style="auto" />
-    </Layout>
+    </NavigationContainer>
   );
 }
-
-const styleSheet = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  red: {
-    color: 'red',
-  },
-  bigText: {
-    fontSize: 20,
-  }
-});
