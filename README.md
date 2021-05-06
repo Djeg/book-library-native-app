@@ -36,6 +36,8 @@ npm start
 - `.gitignore`: référencie tout les fichiers qui ne seront pas dans git (donc dans github)
 - `/node_modules`: Contient toutes les librairies javascript
 - `/assets`: Contient toutes les images, videos, fonts, audio etc ...
+- `/src`: Contient tout notre **code source** (nos composants etc ...). C'est ici qu'on passera
+le plus clair de notre temps.
 - `App.js`: C'est ici que notre application commence !
 
 ## Rappel javascript :)
