@@ -1,4 +1,4 @@
-# Installation
+# Créer un nouveau projet React Native
 
 La première étape c'est l'installation de expo !
 
@@ -26,6 +26,21 @@ On lance la commande `npm start` (
 
 ```
 npm start
+```
+
+# Installer ce projet :)
+
+1. Télécharger le projet avec ce [lien](https://github.com/Djeg/book-library-native-app/archive/refs/heads/master.zip).
+2. Extraire le répertoire ou vous le souhaitez
+3. Ouvrir le répertoire avec VSCode
+4. Exécuter les commandes:
+
+```shell
+yarn install
+yarn start
+
+# ou en une seule ligne
+yarn install && yarn start
 ```
 
 # Arborescence d'un projet react native
