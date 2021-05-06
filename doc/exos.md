@@ -65,3 +65,42 @@ Afficher `HelloText` dans le component `Hello`.
   - Un Text pour afficher le nom de la personne (si aucun nom, afficher "Je ne vous connais pas", sinon afficher "Bonjour {name}")
   - Un Text pour afficher l'age de la personne (si aucun age, afficher "Rentrer votre age", si age < 18 afficher "Vous avez {age}, vous êtes mineur", si l'age est supèrieur à 18 afficher "Vous avez {age}, vous êtes majeur").
 3. Dans le fichier `App.js` Afficher le composant `Welcome`
+
+### Solution 1:
+
+```js
+// src/Welcome.js
+import React, { useState } from 'react'
+import { Text, View, TextInput } from 'react-native'
+
+export const Welcome = () => {
+  // Création des états (le nom, et l'age)
+  const [name, setName] = useState('')
+  const [age, setAge] = useState(0)
+  let helloText = null
+  let ageText = null
+
+  if (!name) {
+    helloText = <Text>Je ne vous connais pas</Text>
+  } else {
+    helloText = <Text>Bonjour {name}</Text>
+  }
+
+  if (!age) {
+    ageText = <Text>Renseigner votre age</Text>
+  } else if (age < 18) {
+    ageText = <Text>Vous avez {age} ans, vous êtes mineur</Text>
+  } else {
+    ageText = <Text>Vous avez {age} ans, vous êtes majeur</Text>
+  }
+
+  return (
+    <View>
+      <TextInput placeholder="Votre nom" value={name} onChangeText={setName} />
+      <TextInput placeholder="Votre age" value={age} onChangeText={setAge} />
+      {helloText}
+      {ageText}
+    </View>
+  )
+}
+```
