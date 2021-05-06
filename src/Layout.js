@@ -1,11 +1,14 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-export const Layout = ({ children }) =>
-  <View style={styles.layout}>
-    <View style={[styles.flexOne, styles.centeredContent]}>{children}</View>
-    <View style={[styles.menu, styles.flexOne]}></View>
-  </View>
+export const Layout = ({ children }) => {
+  return (
+    <View style={styles.layout}>
+      <View style={[styles.flexOne, styles.centeredContent]}>{children}</View>
+      <View style={[styles.menu, styles.flexOne]}></View>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   layout: {
