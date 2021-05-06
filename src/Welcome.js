@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 
 export const Welcome = () => {
-  // Création des états (le nom, et l'age)
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
-  const navigation = useNavigation()
 
   return (
     <View>
@@ -14,7 +11,6 @@ export const Welcome = () => {
       <TextInput placeholder="Votre age" value={age} onChangeText={setAge} />
       <NameText name={name} />
       <AgeText age={age} />
-      <Button title="Go to test screen" onPress={() => navigation.navigate('Test')} />
     </View>
   )
 }
