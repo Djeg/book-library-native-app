@@ -87,6 +87,7 @@ yarn install && yarn start
 - [Les feuilles de style](./doc/stylesheets.md)
 - [Le state en react](./doc/State.md)
 - [La navigation en react native](./doc/navigation.md)
+- [Utiliser react router pour une navigation plus simple](./doc/react-router.md)
 
 ## Les exercices :
 
