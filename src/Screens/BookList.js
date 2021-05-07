@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, Image } from 'react-native'
+import img from './Image.jpeg'
 
 const BookList = () => {
   const [bookList, setBookList] = useState([])
@@ -17,6 +18,7 @@ const BookList = () => {
 
   return (
     <View>
+      <Image source={img} style={{ width: 100, minHeight: 200 }}/>
       <Text>Liste des livres</Text>
         {bookList.map(book => (
           <View>
