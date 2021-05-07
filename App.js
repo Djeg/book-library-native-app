@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { NativeRouter, Route, useParams } from 'react-router-native'
+import { NativeRouter, Route } from 'react-router-native'
 import Layout from './src/Components/Layout';
 import Hello from './src/Screens/Hello';
 import BookList from './src/Screens/BookList';
