@@ -43,6 +43,25 @@ yarn start
 yarn install && yarn start
 ```
 
+# Installer ce projet en utilisant GIT
+
+1. Cloner le projet de le répertoire de votre choix:
+
+```
+git clone https://github.com/Djeg/book-library-native-app.git nomDuDossierIci
+```
+
+2. Ouvrez le dossier créé avec VSCode
+3. Éxécuter les commandes:
+
+```shell
+yarn install
+yarn start
+
+# ou en une seule ligne
+yarn install && yarn start
+```
+
 # Arborescence d'un projet react native
 
 - `package.json` et yarn.lock ou package-lock.json: Définissent les dépendances nescessaire pour faire fonctionner le projet. (des dépendances ce sont des librairies javascript qui vont venir se placer dans le répertoire `node_modules`)
@@ -52,7 +71,7 @@ yarn install && yarn start
 - `/node_modules`: Contient toutes les librairies javascript
 - `/assets`: Contient toutes les images, videos, fonts, audio etc ...
 - `/src`: Contient tout notre **code source** (nos composants etc ...). C'est ici qu'on passera
-le plus clair de notre temps.
+  le plus clair de notre temps.
 - `App.js`: C'est ici que notre application commence !
 
 ## Rappel javascript :)
