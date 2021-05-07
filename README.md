@@ -80,6 +80,7 @@ yarn install && yarn start
 - [Les fonctions en JS](./doc/functions.js)
 - [Le traitement des tableaux en JS](./doc/array.js)
 - [L'import et l'export en JS](./doc/import-export.md)
+- [L'asynchrone en JS](./doc/async.md)
 
 ## Cours React Native
 
@@ -88,6 +89,7 @@ yarn install && yarn start
 - [Le state en react](./doc/State.md)
 - [La navigation en react native](./doc/navigation.md)
 - [Utiliser react router pour une navigation plus simple](./doc/react-router.md)
+- [Les effets](./doc/effects.md)
 
 ## Les exercices :
 
