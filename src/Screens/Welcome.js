@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
 
-export const Welcome = () => {
+const Welcome = () => {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
 
@@ -26,3 +26,5 @@ const AgeText = ({ age }) =>
     : age < 18
       ? <Text>Vous avez {age} ans, vous êtes mineur</Text>
       : <Text>Vous avez {age} ans, vous êtes majeur</Text>
+
+export default Welcome

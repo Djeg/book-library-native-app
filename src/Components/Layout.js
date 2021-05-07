@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
 import { Link } from 'react-router-native'
 
-export const Layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <View style={styles.layout}>
       <View style={[styles.flexOne, styles.centeredContent]}>{children}</View>
@@ -44,3 +44,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 })
+
+export default Layout

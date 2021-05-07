@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { Welcome } from './src/Welcome'
+import Welcome from './src/Screens/Welcome'
 import { NativeRouter, Route } from 'react-router-native'
-import { Layout } from './src/Layout';
-import { Hello } from './src/Hello';
+import Layout from './src/Components/Layout';
+import Hello from './src/Screens/Hello';
 
 export default function App() {
   return (

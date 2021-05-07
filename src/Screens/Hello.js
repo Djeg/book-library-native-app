@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Text, StyleSheet, TextInput, View } from 'react-native';
 
-export const Hello = ({ age, ...restProps }) => {
+const Hello = ({ age, ...restProps }) => {
   const [name, setName] = useState('')
 
   return (
@@ -73,3 +73,5 @@ const styleSheet = StyleSheet.create({
     borderBottomWidth: 1
   }
 })
+
+export default Hello
