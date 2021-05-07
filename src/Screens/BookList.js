@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, Image } from 'react-native'
+import { Link } from 'react-router-native'
 import img from './Image.jpeg'
 
 const BookList = () => {
@@ -23,7 +24,9 @@ const BookList = () => {
         {bookList.map(book => (
           <View>
             <Text>{book.title}</Text>
-            <Image source={book.images[0].src} style={{ width: 100, minHeight: 200 }}/>
+            <Link to={`/book/${book.id}`}>
+              <Image source={book.images[0].src} style={{ width: 100, minHeight: 200 }}/>
+            </Link>
             <Text>{book.stars} / 5</Text>
           </View>
         ))}
