@@ -225,3 +225,17 @@ const AgeText = ({ age }) =>
 4. Uns fois les livres recu, mettre à jour l'état `bookList` de notre composant
 5. Afficher la liste des livres en utilisant des composant `View` et `Text`
 6. Afficher le composant `BookList` dans `App.js`
+
+# Exercice GIT
+
+- Créer un répertoire "MonProjet" sur votre bureau
+- Initialiser un « repository » git dans ce répertoire
+- Créé un fichier README.md dans ce répertoire
+- On suis le fichier via git
+- On commit le fichier avec le message "Création de README.md"
+
+# Exercice GIT 2
+
+- Retoucher le fichier README.md (avec VSCODE) en ajoutant "bonjour"
+- On suis le fichier via git
+- On commit le fichier avec le message "Ajout de bonjour dans README.md"

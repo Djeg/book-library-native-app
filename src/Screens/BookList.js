@@ -8,7 +8,7 @@ const BookList = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const response = await fetch('https://djeg-book-library-api.herokuapp.com/books')
+      const response = await fetch('http://localhost:3000/books')
       const json = await response.json()
 
       setBookList(json)
@@ -24,8 +24,8 @@ const BookList = () => {
         {bookList.map(book => (
           <View>
             <Text>{book.title}</Text>
-            <Link to={`/book/${book.id}`}>
-              <Image source={book.images[0].src} style={{ width: 100, minHeight: 200 }}/>
+            <Link to={`/book/${book._id}`}>
+              <Image source={book.image} style={{ width: 100, minHeight: 200 }}/>
             </Link>
             <Text>{book.stars} / 5</Text>
           </View>
