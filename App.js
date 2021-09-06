@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
+import Header from './src/Header'
 import Hello from './src/Hello'
 import YellowText from './src/YellowText'
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View>
+      <Header />
       <Hello />
       <YellowText>Coucou les amis</YellowText>
     </View>
