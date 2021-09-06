@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
+import Content from './src/Content'
 import Header from './src/Header'
 import Hello from './src/Hello'
 import YellowText from './src/YellowText'
@@ -8,8 +9,10 @@ export default function App() {
   return (
     <View>
       <Header />
-      <Hello />
-      <YellowText>Coucou les amis</YellowText>
+      <Content>
+        <Hello />
+        <YellowText>Coucou les amis</YellowText>
+      </Content>
     </View>
   )
 }
