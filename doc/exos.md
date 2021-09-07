@@ -32,3 +32,14 @@
 3. Ajouter du style selon votre gout
 4. Ajouter le composant "BookList" dans
    let fichier "App.js"
+
+## Exo 5 - La connexion
+
+1. Créer un composant "Login"
+2. Dans ce composant afficher 2 text input: 'email' et 'mot de passe'
+3. Afficher aussi un bouton 'Connexion'
+4. Créer et attacher un état pour l'email et le mot de passe
+5. Lors du clique sur le bouton connexion afficher dans la console:
+   'Votre email : <email>'
+   'Votre mot de passe : <motDePasse>'
+6. Afficher la composant 'Login' dans le fichier 'App.js'
