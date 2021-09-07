@@ -1,25 +1,26 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import BookList from './src/BookList'
+import BookList from './src/screens/BookList'
 import Content from './src/Content'
-import CreateAccount from './src/CreateAccount'
+import CreateAccount from './src/screens/CreateAccount'
 import Header from './src/Header'
-import Hello from './src/Hello'
-import Login from './src/Login'
-import YellowText from './src/YellowText'
+import Login from './src/screens/Login'
+import { NativeRouter, Route } from 'react-router-native'
+import Menu from './src/Menu'
 
 export default function App() {
   return (
-    <View>
-      <Header />
-      <Content>
-        <Login />
-        <CreateAccount />
-        <BookList />
-        <Hello />
-        <YellowText>Coucou les amis</YellowText>
-      </Content>
-    </View>
+    <NativeRouter>
+      <View>
+        <Header />
+        <Menu />
+        <Content>
+          <Route exact path='/' component={BookList} />
+          <Route exact path='/connexion' component={Login} />
+          <Route exact path='/inscription' component={CreateAccount} />
+        </Content>
+      </View>
+    </NativeRouter>
   )
 }
 

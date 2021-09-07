@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
-import BookThumbnail from './BookThumbnail'
+import BookThumbnail from '../BookThumbnail'
 
 export default () => {
   return (
