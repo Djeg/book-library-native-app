@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
 
 export default () => {
-  const [email, setEmail] = useState('coucou@mail.com')
-  const [password, setPassword] = useState('pass')
-  const [confirmPassword, setConfirmPassword] = useState('pass')
+  const [email, setEmail] = useState('')
+  const [emailError, setEmailError] = useState(false)
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
+  // Side Effect
+  useEffect(() => {
+    if (!email) {
+      setEmailError(false)
+    } else if (/^[^ @]+@[^ @]+\.[a-zA-Z0-9]+$/.test(email)) {
+      setEmailError(false)
+    } else {
+      setEmailError(true)
+    }
+  }, [email])
 
   // g x => 1 + x
   // f x => g(x)
@@ -23,6 +35,8 @@ export default () => {
           style={styles.textInput}
           onChangeText={setEmail}
         />
+        <Text>Email : {email}</Text>
+        {emailError ? <Text>Email invalide</Text> : null}
       </View>
       <View>
         <Text>Votre mot de passe :</Text>
