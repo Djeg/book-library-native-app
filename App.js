@@ -2,6 +2,7 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import BookList from './src/BookList'
 import Content from './src/Content'
+import CreateAccount from './src/CreateAccount'
 import Header from './src/Header'
 import Hello from './src/Hello'
 import YellowText from './src/YellowText'
@@ -11,6 +12,7 @@ export default function App() {
     <View>
       <Header />
       <Content>
+        <CreateAccount />
         <BookList />
         <Hello />
         <YellowText>Coucou les amis</YellowText>

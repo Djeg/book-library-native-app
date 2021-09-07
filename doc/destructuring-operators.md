@@ -19,6 +19,13 @@ const [john, ...restUsers] = users
 
 console.log(john) // 'john'
 console.log(restUsers) // [ 'jane', 'rose' ]
+
+const state = ['john@mail.com', () => console.log('test')]
+
+const email = state[0]
+const setEmail = state[1]
+
+const [email, setEmail] = state
 ```
 
 ## Les objets
