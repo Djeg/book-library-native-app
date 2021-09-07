@@ -43,3 +43,25 @@
    'Votre email : <email>'
    'Votre mot de passe : <motDePasse>'
 6. Afficher la composant 'Login' dans le fichier 'App.js'
+
+# Exo 6 - Les routes
+
+Vous pouvez vous aider de la documentation
+https://reactrouter.com/native/guides/quick-start
+
+1. Commencer par installer 'react-router-native'
+   (npm i react-router-native)
+2. Dans le répertoire src, créer un répertoire
+   'screens'.
+3. Déplacer dans le répertoire 'screens' les
+   composants suivant : "BookList", "CreateAccount"
+   "Login"
+4. Dans App.js, mettez en place le composant
+   `NativeRouter`
+5. Dans le composant "Content" de App.js, remplacer
+   ses enfants par 3 'Route' :
+   "/" => BookList
+   "/connexion" => Login
+   "/inscription" => CreateAccount
+6. Créer un composant "Menu", qui affiche 3 'Link' :
+   "Accueil", "Inscription" et "Connexion"
