@@ -5,6 +5,7 @@ import Content from './src/Content'
 import CreateAccount from './src/CreateAccount'
 import Header from './src/Header'
 import Hello from './src/Hello'
+import Login from './src/Login'
 import YellowText from './src/YellowText'
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
     <View>
       <Header />
       <Content>
+        <Login />
         <CreateAccount />
         <BookList />
         <Hello />
