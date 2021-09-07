@@ -51,6 +51,16 @@ https://reactrouter.com/native/guides/quick-start
 
 1. Commencer par installer 'react-router-native'
    (npm i react-router-native)
+   1.2 Retoucher le fichier "app.json", dans la séction
+   web, juste après la clefs favicon rajouter
+   la config suivante :
+   ```
+   "build": {
+    "babel": {
+      "include": ["react-router-native"]
+    }
+   }
+   ```
 2. Dans le répertoire src, créer un répertoire
    'screens'.
 3. Déplacer dans le répertoire 'screens' les
