@@ -75,3 +75,17 @@ https://reactrouter.com/native/guides/quick-start
    "/inscription" => CreateAccount
 6. Créer un composant "Menu", qui affiche 3 'Link' :
    "Accueil", "Inscription" et "Connexion"
+
+# Exo 7 - Inscription
+
+1. Dans le fichier `src/screens/CreateAccount`, lorque l'utilisateur valide
+   le formulaire utiliser firebase pour créer un
+   utilisateur.
+
+2. Pour cela utiliser la fonction createUserWithEmailAndPassword
+   de 'firebase/auth'
+
+3. Et afficher l'utilisateur créé dans la console.
+
+4. Vous retrouverez la documentation sur ce lien la :
+   https://firebase.google.com/docs/auth/web/start#web-v9

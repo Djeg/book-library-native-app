@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
+import { auth } from '../firebase'
 
 export default () => {
   const [email, setEmail] = useState('')

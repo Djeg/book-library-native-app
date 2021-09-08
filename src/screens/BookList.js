@@ -2,7 +2,7 @@ import { collection, getDocs } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { ScrollView } from 'react-native'
 import BookThumbnail from '../BookThumbnail'
-import db from '../firebase'
+import { db } from '../firebase'
 
 export default () => {
   const [books, setBooks] = useState([])
@@ -22,7 +22,7 @@ export default () => {
       // snapshot.docs (contient un tableau de documents)
       // Une fois que l'on obtient un document, nous pouvons
       // récupérer les données graçe à document.data()
-      const receivedBooks = snapshot.docs.map((document) => {
+      const receivedBooks = snapshot.docs.map(document => {
         // Ici, document.data() retourne les données stocké
         // dans le document concerné. Attention, document.data
         // ne retourne pas l'id !
@@ -58,7 +58,7 @@ export default () => {
 
   return (
     <ScrollView>
-      {books.map((book) => (
+      {books.map(book => (
         <BookThumbnail
           key={`book-${book.id}`}
           title={book.title}
