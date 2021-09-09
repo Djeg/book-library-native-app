@@ -1,4 +1,3 @@
-import { collection, getDocs } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { ScrollView } from 'react-native'
 import BookThumbnail from '../BookThumbnail'
@@ -16,7 +15,7 @@ export default () => {
       // On utilise getDocs afin de récupérer plusieurs documents
       // On utilise collection afin de récupérer une collection
       // getDocs est asynchrone, et retourne un QuerySnaphot
-      const snapshot = await getDocs(collection(db, 'books'))
+      const snapshot = await db.collection('books').get()
 
       // Dans ce query snapshot, nous avons la liste des document
       // snapshot.docs (contient un tableau de documents)
@@ -46,7 +45,7 @@ export default () => {
   // des promesses dans useEffect
   //
   // useEffect(() => {
-  //   getDocs(collection(db, 'books'))
+  //   db.collection('books').get()
   //     .then(({ docs }) =>
   //       docs.map((document) => ({
   //         ...document.data(),

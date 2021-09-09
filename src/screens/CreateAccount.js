@@ -1,4 +1,3 @@
-import { createUserWithEmailAndPassword } from '@firebase/auth'
 import React, { useState, useEffect } from 'react'
 import {
   ActivityIndicator,
@@ -128,8 +127,7 @@ export default () => {
 
     const sendToFirebase = async () => {
       try {
-        const userCredential = await createUserWithEmailAndPassword(
-          auth,
+        const userCredential = await auth.createUserWithEmailAndPassword(
           emailField.value,
           passwordField.value
         )
