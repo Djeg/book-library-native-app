@@ -16,7 +16,9 @@ export default function App() {
         <Menu />
         <Content>
           <Route exact path='/' component={BookList} />
-          <Route exact path='/connexion' component={Login} />
+          <Route exact path='/connexion'>
+            <Login />
+          </Route>
           <Route exact path='/inscription' component={CreateAccount} />
         </Content>
       </View>
