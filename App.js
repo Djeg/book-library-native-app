@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, createContext, useContext } from 'react'
 import { View, StyleSheet } from 'react-native'
 import BookList from './src/screens/BookList'
 import Content from './src/Content'
@@ -7,27 +7,32 @@ import Header from './src/Header'
 import Login from './src/screens/Login'
 import { NativeRouter, Route } from 'react-router-native'
 import Menu from './src/Menu'
+import IsConnectedProvider, {
+  IsConnectedContext,
+} from './src/IsConnectedContext'
 
 export default function App() {
-  const [isConnected, setIsConnected] = useState(false)
-
   return (
     <NativeRouter>
-      <View>
-        <Header />
-        {!isConnected && <Menu />}
-        <Content>
-          <Route exact path='/'>
-            <BookList />
-          </Route>
-          <Route exact path='/connexion'>
-            <Login onConnexion={() => setIsConnected(true)} />
-          </Route>
-          <Route exact path='/inscription'>
-            <CreateAccount onTest={() => console.log('test')} />
-          </Route>
-        </Content>
-      </View>
+      <IsConnectedProvider>
+        <View>
+          <Header />
+          <IsConnectedContext.Consumer>
+            {([isConnected]) => !isConnected && <Menu />}
+          </IsConnectedContext.Consumer>
+          <Content>
+            <Route exact path='/'>
+              <BookList />
+            </Route>
+            <Route exact path='/connexion'>
+              <Login />
+            </Route>
+            <Route exact path='/inscription'>
+              <CreateAccount onTest={() => console.log('test')} />
+            </Route>
+          </Content>
+        </View>
+      </IsConnectedProvider>
     </NativeRouter>
   )
 }

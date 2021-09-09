@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import {
   ActivityIndicator,
   Button,
@@ -10,15 +10,16 @@ import {
 import { styles as createAccountStyles } from './CreateAccount'
 import { auth } from '../firebase'
 import { Redirect } from 'react-router-native'
+import { IsConnectedContext } from '../IsConnectedContext'
 
-export default ({ onConnexion }) => {
+export default () => {
   // STATE
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [sending, setSending] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
-  const [isConnected, setIsConnected] = useState(false)
+  const [isConnected, setIsConnected] = useContext(IsConnectedContext)
 
   // EFFECTS
   //useEffect(() => {
@@ -54,7 +55,6 @@ export default ({ onConnexion }) => {
 
         setTimeout(() => {
           setIsConnected(true)
-          onConnexion()
         }, 1000)
       } catch (e) {
         setErrorMessage(e.message)
