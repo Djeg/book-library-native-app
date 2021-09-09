@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import { styles as createAccountStyles } from './CreateAccount'
 import { auth } from '../firebase'
+import { Redirect } from 'react-router-native'
 
 export default () => {
   // STATE
@@ -17,6 +18,7 @@ export default () => {
   const [sending, setSending] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
+  const [isConnected, setIsConnected] = useState(false)
 
   // EFFECTS
   //useEffect(() => {
@@ -49,6 +51,10 @@ export default () => {
         )
 
         setSuccessMessage(`Bienvenue ${userCredential.user.email} :)`)
+
+        setTimeout(() => {
+          setIsConnected(true)
+        }, 1000)
       } catch (e) {
         setErrorMessage(e.message)
       }
@@ -63,6 +69,8 @@ export default () => {
   const onPress = () => {
     setSending(true)
   }
+
+  if (isConnected) return <Redirect to='/' />
 
   // JSX
   return (
