@@ -89,3 +89,18 @@ https://reactrouter.com/native/guides/quick-start
 
 4. Vous retrouverez la documentation sur ce lien la :
    https://firebase.google.com/docs/auth/web/start#web-v9
+
+# Exo - 8 Connexion
+
+Dans le fichier `Login.js`
+
+1. Importer la constante "auth" depuis le fichier firebase
+   (vous avez un éxemple de le fichier CreateAccount.js)
+2. Lancer un effet lorsque l'on clique sur le bouton
+   "Connexion"
+3. Dans cette effet utiliser `auth.signInWithEmailAndPassword(email, password)` qui est une fonction asynchrone. Si tout
+   ce passe bien, afficher un text de couleur verte "Bienvenue <email>". Sinon, afficher un texte rouge
+   avec "Email ou mot de passe invalide"
+
+Vous pouvez aider de la documentation de firebase :
+https://firebase.google.com/docs/auth/web/password-auth?authuser=0#web-v8
