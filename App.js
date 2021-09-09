@@ -17,7 +17,7 @@ export default function App() {
         <Content>
           <Route exact path='/' component={BookList} />
           <Route exact path='/connexion'>
-            <Login />
+            <Login onConnexion={() => console.log('coucou')} />
           </Route>
           <Route exact path='/inscription' component={CreateAccount} />
         </Content>
