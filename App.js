@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import BookList from './src/screens/BookList'
 import Content from './src/Content'
@@ -9,17 +9,23 @@ import { NativeRouter, Route } from 'react-router-native'
 import Menu from './src/Menu'
 
 export default function App() {
+  const [isConnected, setIsConnected] = useState(false)
+
   return (
     <NativeRouter>
       <View>
         <Header />
-        <Menu />
+        {!isConnected && <Menu />}
         <Content>
-          <Route exact path='/' component={BookList} />
-          <Route exact path='/connexion'>
-            <Login onConnexion={() => console.log('coucou')} />
+          <Route exact path='/'>
+            <BookList />
           </Route>
-          <Route exact path='/inscription' component={CreateAccount} />
+          <Route exact path='/connexion'>
+            <Login onConnexion={() => setIsConnected(true)} />
+          </Route>
+          <Route exact path='/inscription'>
+            <CreateAccount onTest={() => console.log('test')} />
+          </Route>
         </Content>
       </View>
     </NativeRouter>
