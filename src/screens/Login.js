@@ -11,7 +11,7 @@ import { styles as createAccountStyles } from './CreateAccount'
 import { auth } from '../firebase'
 import { Redirect } from 'react-router-native'
 
-export default () => {
+export default ({ onConnexion }) => {
   // STATE
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -54,6 +54,7 @@ export default () => {
 
         setTimeout(() => {
           setIsConnected(true)
+          onConnexion()
         }, 1000)
       } catch (e) {
         setErrorMessage(e.message)
