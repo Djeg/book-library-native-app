@@ -31,10 +31,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'red',
-    padding: '15px',
+    padding: 15,
   },
   title: {
     color: 'white',
-    fontSize: '20px',
+    fontSize: 20,
   },
 })

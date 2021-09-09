@@ -11,7 +11,7 @@ export default ({ name = 'Inconnue', age = 24 }) => {
 
 export const styles = StyleSheet.create({
   title: {
-    fontSize: '25px',
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
     color: 'white',

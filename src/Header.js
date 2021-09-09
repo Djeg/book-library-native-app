@@ -11,13 +11,13 @@ export default () => {
 
 export const styles = StyleSheet.create({
   header: {
-    paddingTop: '15px',
-    paddingBottom: '15px',
+    paddingTop: 15,
+    paddingBottom: 15,
     backgroundColor: '#464646',
   },
   title: {
     textAlign: 'center',
-    fontSize: '15px',
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#adadad',
   },

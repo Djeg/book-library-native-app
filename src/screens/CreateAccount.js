@@ -234,7 +234,6 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     padding: 15,
-    display: 'block',
     marginTop: 8,
     marginBottom: 10,
   },
