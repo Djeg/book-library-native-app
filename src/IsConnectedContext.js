@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 export const IsConnectedContext = createContext([false, () => null])
 
-export default ({ children }) => {
+export const IsConnectedProvider = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false)
 
   return (
@@ -11,3 +11,5 @@ export default ({ children }) => {
     </IsConnectedContext.Provider>
   )
 }
+
+export default IsConnectedProvider

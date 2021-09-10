@@ -30,6 +30,7 @@ const SENDING_STEPS = {
 }
 
 export default () => {
+  // STATE
   const [emailField, setEmailField] = useState({ value: '', error: '' })
   const [passwordField, setPasswordField] = useState({ value: '', error: '' })
   const [confirmPasswordField, setConfirmPasswordField] = useState({
@@ -39,7 +40,7 @@ export default () => {
   const [formError, setFormError] = useState('')
   const [step, setStep] = useState(SENDING_STEPS.NONE)
 
-  // Effects
+  // EFFECT
   // Première effet, la validation des données
   useEffect(() => {
     // Cette effet se déclenche uniquement lors de la step "VALIDATION"
@@ -147,6 +148,16 @@ export default () => {
     }, 1000)
   }, [step])
 
+  // HELPERS
+  // curried function
+  // setField :: { value :: string, error :: string } -> Void
+  // changeField :: setField -> String -> Void
+  const changeField = setField => value =>
+    setField({
+      error: '',
+      value,
+    })
+
   return (
     <View>
       <View>
@@ -157,12 +168,8 @@ export default () => {
         <TextInput
           value={emailField.value}
           style={styles.textInput}
-          onChangeText={value => {
-            setEmailField({
-              value: value,
-              error: '',
-            })
-          }}
+          // onChangeText :: String -> Void
+          onChangeText={changeField(setEmailField)}
         />
       </View>
       <View>
@@ -173,12 +180,7 @@ export default () => {
         <TextInput
           value={passwordField.value}
           style={styles.textInput}
-          onChangeText={value => {
-            setPasswordField({
-              value: value,
-              error: '',
-            })
-          }}
+          onChangeText={changeField(setPasswordField)}
         />
       </View>
       <View>
@@ -189,37 +191,40 @@ export default () => {
         <TextInput
           value={confirmPasswordField.value}
           style={styles.textInput}
-          onChangeText={value => {
-            setConfirmPasswordField({
-              value: value,
-              error: '',
-            })
-          }}
+          onChangeText={changeField(setConfirmPasswordField)}
         />
       </View>
       {step === SENDING_STEPS.NONE ? (
-        <View style={styles.button}>
-          {!!formError && <Text style={styles.error}>{formError}</Text>}
-          <Button
-            title="S'inscrire"
-            onPress={() => {
-              setStep(SENDING_STEPS.VALIDATION)
-            }}
-          />
-        </View>
+        <SubmitButton formError={formError} setStep={setStep} />
       ) : (
-        <View>
-          <ActivityIndicator size='small' />
-          <Text>
-            {step === SENDING_STEPS.VALIDATION
-              ? 'Validation des données ...'
-              : "Envoie des données dans l'espace ..."}
-          </Text>
-        </View>
+        <Loading step={step} />
       )}
     </View>
   )
 }
+
+const SubmitButton = ({ formError, setStep }) => (
+  <View style={styles.button}>
+    {!!formError && <Text style={styles.error}>{formError}</Text>}
+    <Button
+      title="S'inscrire"
+      onPress={() => {
+        setStep(SENDING_STEPS.VALIDATION)
+      }}
+    />
+  </View>
+)
+
+const Loading = ({ step }) => (
+  <View>
+    <ActivityIndicator size='small' />
+    <Text>
+      {step === SENDING_STEPS.VALIDATION
+        ? 'Validation des données ...'
+        : "Envoie des données dans l'espace ..."}
+    </Text>
+  </View>
+)
 
 export const styles = StyleSheet.create({
   textInput: {
@@ -243,3 +248,23 @@ export const styles = StyleSheet.create({
     color: 'red',
   },
 })
+
+// classicAdd :: (Number, Number) -> Number
+const classicAdd = (x, y) => x + y
+
+const x1 = classicAdd(3, 4)
+
+// curriedAdd :: Number -> Number -> Number
+const curriedAdd = x => y => x + y
+
+// x2 :: Number
+const x2 = curriedAdd(3)(4)
+
+// add3 :: Number -> Number
+const add3 = curriedAdd(3)
+// add10 :: Number -> Number
+const add10 = curriedAdd(10)
+const add8 = curriedAdd(8)
+const add2 = curriedAdd(2)
+
+add3(9) // 12
